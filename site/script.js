@@ -1,3 +1,18 @@
+// Start ordinary document navigation at the top, without overriding anchors or history traversal.
+(() => {
+  const entry = performance.getEntriesByType?.('navigation')[0];
+  if (entry?.type === 'back_forward') return;
+  const reset = () => {
+    if (!location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  };
+  reset();
+  window.addEventListener('pageshow', event => {
+    if (event.persisted) return;
+    reset();
+    requestAnimationFrame(reset);
+  });
+})();
+
 (() => {
   'use strict';
   const $ = (s, root = document) => root.querySelector(s);

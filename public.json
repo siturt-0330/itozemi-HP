@@ -1,0 +1,150 @@
+{
+  "schemaVersion": 1,
+  "memberProfileVersion": 1,
+  "memberLeadershipVersion": 1,
+  "sourceOrigin": "https://niigata-ito-seminar.niigata-univ-7185.chatgpt.site",
+  "slides": [
+    {
+      "id": "slide-learning",
+      "title": "学びを\n事業を生み出す力に",
+      "description": "",
+      "category": "ABOUT ITO SEMINAR",
+      "cta": "伊藤ゼミについて",
+      "href": "about.html",
+      "image": "assets/kameda-meeting.jpg"
+    },
+    {
+      "id": "slide-projects",
+      "title": "企業と共に\nアイデアを形に",
+      "description": "",
+      "category": "OUR PROJECTS",
+      "cta": "プロジェクトを知る",
+      "href": "projects.html",
+      "image": "assets/masuya-meeting.jpg"
+    },
+    {
+      "id": "slide-join",
+      "title": "挑戦する仲間と\n次の一歩へ",
+      "description": "学びも 対話も 仲間との時間も",
+      "category": "JOIN US",
+      "cta": "入ゼミを考えている方へ",
+      "href": "join.html",
+      "image": "assets/softball-2026.jpg"
+    }
+  ],
+  "about": {
+    "headline": "アントレプレナーのための\n戦略とマーケティング。",
+    "body": "2010年にスタートした伊藤龍史ゼミ。私たちが大切にしているのは、アクションリサーチを通じた「理論と実践の高速往復」です。\n\n経営学の理論を学び、企業の課題や自分たちの事業アイデアに取り組む。そして実践で生まれた問いを、次の学びへつなげていきます。"
+  },
+  "posts": [
+    {
+      "id": "visit-2026",
+      "title": "伊藤龍史ゼミ 見学のお知らせ",
+      "summary": "ゼミ見学は10月ごろに開催予定です。最新情報は公式Instagramでご確認ください。",
+      "body": "ゼミ見学は10月ごろに開催予定です。日程や見学方法は公式Instagramでご確認ください。",
+      "date": "2026-10-02",
+      "category": "join",
+      "status": "published",
+      "link": "",
+      "image": "assets/seminar-2026.jpg"
+    },
+    {
+      "id": "abmc-2026",
+      "title": "ABMC JAPANでゼミのチームが全国優勝・日本代表に選出",
+      "summary": "ビジネスモデルコンテストでの学生の活動が、新潟大学公式サイトで紹介されました。",
+      "body": "2026年のABMC JAPANで、伊藤ゼミのチームが全国優勝し、日本代表に選出されました。詳しくは新潟大学の受賞報告をご覧ください。",
+      "date": "2026-08-03",
+      "category": "awards",
+      "status": "published",
+      "link": "https://www.niigata-u.ac.jp/campus/shindaisei/2026/1203516/",
+      "image": "assets/award.jpg"
+    },
+    {
+      "id": "sports-2026",
+      "title": "スポーツ大会2026 ― 学年を超えた交流の時間",
+      "summary": "14期生・15期生の交流企画としてスポーツ大会を開催しました。",
+      "body": "学年を超えた交流を深める企画として、スポーツ大会を開催しました。当日の様子は公式noteで紹介しています。",
+      "date": "2026-04-19",
+      "category": "daily",
+      "status": "published",
+      "link": "",
+      "image": "assets/sports-2026.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "id": "collaboration",
+      "title": "企業コラボレーション",
+      "summary": "企業が抱える実際の課題を出発点に、新事業などを提案。企業や地域の方々との対話を通じて、学んだ理論を現場で活用します。",
+      "body": "実際の企業が抱える課題に向き合い、新事業などを提案するプロジェクトです。企業や地域の方々との対話を通じて、経営戦略やマーケティングの理論を活用していきます。",
+      "date": "2026-04-01",
+      "category": "BUSINESS COLLABORATION",
+      "status": "published",
+      "link": "",
+      "image": "assets/masuya-meeting.jpg"
+    },
+    {
+      "id": "creation",
+      "title": "新規事業立案",
+      "summary": "自分たちの着想をもとに、新しい事業の開発や起業に挑戦。ビジネスコンテストなども、構想を磨き、社会へ伝える機会になります。",
+      "body": "自らのアイデアをもとに、新事業の開発や起業に挑戦します。理論の学習と実際の行動を繰り返しながら、構想を深めていく取り組みです。",
+      "date": "2026-04-01",
+      "category": "NEW BUSINESS PLANNING",
+      "status": "published",
+      "link": "",
+      "image": "assets/open-gate-07.jpg"
+    }
+  ],
+  "members": [
+    {
+      "id": "student-05",
+      "name": "丹治璃空",
+      "group": "ゼミ長",
+      "intro": "",
+      "body": "",
+      "tags": [],
+      "status": "published",
+      "image": "assets/member-introductions-grid.jpg"
+    },
+    {
+      "id": "student-03",
+      "name": "川口聖也",
+      "group": "副ゼミ長",
+      "intro": "",
+      "body": "",
+      "tags": [],
+      "status": "published",
+      "image": "assets/member-introductions-grid.jpg"
+    },
+    {
+      "id": "student-01",
+      "name": "齋藤稜太",
+      "group": "人材開発部長",
+      "intro": "",
+      "body": "",
+      "tags": [],
+      "status": "published",
+      "image": "assets/member-saito.jpg"
+    },
+    {
+      "id": "student-04",
+      "name": "中澤莉胡",
+      "group": "総務部長",
+      "intro": "",
+      "body": "",
+      "tags": [],
+      "status": "published",
+      "image": "assets/member-nakazawa.jpg"
+    },
+    {
+      "id": "student-02",
+      "name": "吉池心子",
+      "group": "広報部長",
+      "intro": "",
+      "body": "",
+      "tags": [],
+      "status": "published",
+      "image": "assets/member-yoshiike.jpg"
+    }
+  ]
+}

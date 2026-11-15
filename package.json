@@ -1,0 +1,11 @@
+{
+  "name": "ito-seminar-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "export:pages": "node scripts/export-pages.mjs"
+  },
+  "devDependencies": {
+    "happy-dom": "21.0.4"
+  }
+}

@@ -1,0 +1,89 @@
+name: Publish GitHub Pages
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    name: Check published content
+    runs-on: ubuntu-latest
+    outputs:
+      ready: ${{ steps.content.outputs.ready }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Check CMS export
+        id: content
+        shell: bash
+        run: |
+          if [[ -f content/public.json ]]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            cat >> "$GITHUB_STEP_SUMMARY" <<'SUMMARY'
+          ## 公開をスキップしました
+
+          CMSからGitHub公開用ZIPを書き出し、リポジトリのルートに展開してください。
+          `content/public.json` と、ZIPに含まれる `site/uploads/` の写真をコミットして、既定のブランチへpushすると公開できます。
+
+          公開用データがない状態で、初期データを代わりに公開することはありません。
+          SUMMARY
+          fi
+
+  publish:
+    name: Build and deploy
+    needs: prepare
+    if: >-
+      needs.prepare.outputs.ready == 'true' &&
+      github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Export public site
+        env:
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+        run: >-
+          node scripts/export-pages.mjs
+          --base-url "$PAGES_BASE_URL"
+          --content content/public.json
+          --out dist-pages
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist-pages
+
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
